@@ -1,4 +1,160 @@
 <!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Tragaluz | Narrativas Espaciales</title>
+    
+    <!-- Custom Fonts (Qanelas) -->
+    <style>
+        @font-face { font-family: 'Qanelas'; src: url('Qanelas/Qanelas-Light.otf') format('opentype'); font-weight: 300; font-style: normal; }
+        @font-face { font-family: 'Qanelas'; src: url('Qanelas/Qanelas-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; }
+        @font-face { font-family: 'Qanelas'; src: url('Qanelas/Qanelas-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; }
+        @font-face { font-family: 'Qanelas'; src: url('Qanelas/Qanelas-SemiBold.otf') format('opentype'); font-weight: 600; font-style: normal; }
+        @font-face { font-family: 'Qanelas'; src: url('Qanelas/Qanelas-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+        @font-face { font-family: 'Qanelas'; src: url('Qanelas/Qanelas-ExtraBold.otf') format('opentype'); font-weight: 800; font-style: normal; }
+    </style>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Qanelas', 'system-ui', 'sans-serif'],
+                        serif: ['Qanelas', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        tragaluz: {
+                            bg: '#F9F8F6',
+                            dark: '#1A1A1A',
+                            accent: '#8C857B',
+                            light: '#EBE9E4'
+                        }
+                    },
+                    spacing: { '128': '32rem' }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Animations and specific styling -->
+    <style>
+        body { background-color: #F9F8F6; color: #1A1A1A; overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F9F8F6; }
+        ::-webkit-scrollbar-thumb { background: #8C857B; border-radius: 4px; }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .img-grid-container { position: relative; height: 600px; }
+        @media (max-width: 768px) { .img-grid-container { height: 400px; margin-top: 2rem; } }
+        .hero-bg { background-image: url('IMG_0764_WEBSITE.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(26,26,26,0.3) 0%, rgba(26,26,26,0.7) 100%); }
+        @keyframes fadeInUpHero { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-animate { opacity: 0; animation: fadeInUpHero 2s ease-out forwards; }
+        .hero-animate-delay { opacity: 0; animation: fadeInUpHero 2s ease-out 1s forwards; }
+    </style>
+</head>
+<body class="antialiased selection:bg-tragaluz-dark selection:text-white">
+
+    <!-- HERO SECTION -->
+    <header class="relative w-full h-screen flex flex-col justify-center items-center text-center hero-bg">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 px-4 flex flex-col items-center w-full">
+            <img src="TGZ_Logo_LOGO%20FULL%20POSITIVO.png" alt="Estudio Tragaluz Logo" class="w-[280px] md:w-[400px] lg:w-[480px] h-auto mb-6 hero-animate">
+            <p class="text-gray-200 text-sm md:text-lg lg:text-xl font-sans font-light tracking-wide hero-animate-delay md:whitespace-nowrap">
+                Fotografía y audiovisuales para proyectos de arquitectura, interiorismo, diseño y arte.
+            </p>
+        </div>
+        <a href="#esencia" class="absolute bottom-10 z-10 text-white opacity-70 hover:opacity-100 transition-opacity flex flex-col items-center gap-2 group">
+            <span class="text-xs uppercase tracking-widest font-sans">Descubre nuestra mirada</span>
+            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </a>
+    </header>
+
+    <!-- SECCIÓN 2: NUESTRA ESENCIA (THE WHY) -->
+    <section id="esencia" class="py-24 md:py-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div class="w-full lg:w-1/2 reveal">
+            <span class="text-tragaluz-accent text-sm uppercase tracking-[0.2em] mb-4 block font-sans font-light">Nuestra Filosofía</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-tragaluz-dark leading-tight mb-8">Contar el proyecto a través de la imagen</h2>
+            <div class="text-gray-600 font-sans font-light leading-relaxed space-y-6 text-lg">
+                <p>La mejor forma de capturar, habitar y comprender un proyecto se da a través de entender las decisiones de diseño y traducirlas en imágenes y piezas audiovisuales con alma, construyendo un relato que conecte con la esencia del proyecto.</p>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/2 relative h-[500px] md:h-[600px] reveal delay-200 mt-10 lg:mt-0">
+            <img src="TGZ_CNFT_Nogal601-10_WEB.jpg" alt="Pasillo diseño interior" class="absolute bottom-0 left-0 w-3/5 h-[70%] object-cover shadow-xl border-4 border-tragaluz-bg z-20">
+            <img src="TGZ_CNFT_Nogal601-04_WEB.jpg" alt="Detalle puerta y luz" class="absolute top-0 right-0 w-[65%] h-[80%] object-cover shadow-2xl z-10">
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: NUESTRO ENFOQUE (THE WHAT) -->
+    <section class="py-24 bg-tragaluz-dark text-tragaluz-bg px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <p class="w-full max-w-none mx-auto font-sans font-light text-gray-300 text-lg md:text-xl lg:whitespace-nowrap">
+                    Somos arquitectos y artistas visuales, nos comunicamos en tu lenguaje y lo traducimos a través de la imagen.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="reveal border-t border-gray-700 pt-8">
+                    <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-4 block">01</span>
+                    <h3 class="text-xl font-sans font-bold mb-4 uppercase tracking-wider">Fotografía</h3>
+                    <p class="font-sans font-light text-gray-400 leading-relaxed">Registramos el proyecto, sus características y propósitos. Capturamos la obra resaltando sus elementos característicos y atmósferas para resaltar su caracter.</p>
+                </div>
+                <div class="reveal delay-100 border-t border-gray-700 pt-8">
+                    <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-4 block">02</span>
+                    <h3 class="text-xl font-sans font-bold mb-4 uppercase tracking-wider">Cinematografía</h3>
+                    <p class="font-sans font-light text-gray-400 leading-relaxed">Movimiento y sonido para narrar el flujo, la escala y la atmósfera y esencia del proyecto. Creamos piezas audiovisuales que invitan a descubrir y comunican el valor del diseño.</p>
+                </div>
+                <div class="reveal delay-200 border-t border-gray-700 pt-8">
+                    <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-4 block">03</span>
+                    <h3 class="text-xl font-sans font-bold mb-4 uppercase tracking-wider">Dirección de Arte</h3>
+                    <p class="font-sans font-light text-gray-400 leading-relaxed">Planificamos cada escena para que cada pieza visual comunique la intención original del diseño, aportando escala humana y naturalidad de manera estratégica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: CIERRE -->
+    <section class="py-32 px-6 text-center bg-white border-y border-tragaluz-light reveal">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+            <p class="font-sans font-light text-gray-600 text-xl leading-relaxed mb-10">
+                Sabemos que cada proyecto es único, desde el diseño de una pieza de mobiliario, un proyecto arquitectónico, hasta un plan maestro. Por eso desarrollamos una propuesta a la medida de tus necesidades.
+            </p>
+            
+            <!-- BOTÓN QUE ABRE LOS SERVICIOS -->
+            <button onclick="openServices()" class="bg-tragaluz-dark text-tragaluz-bg px-8 py-4 uppercase tracking-[0.15em] text-sm font-semibold hover:bg-tragaluz-accent transition-colors shadow-lg">
+                Conoce nuestros servicios
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-tragaluz-dark text-tragaluz-bg py-12 px-6 text-center">
+        <h4 class="font-bold text-3xl md:text-4xl mb-2">tragaluz.</h4>
+        <p class="font-sans font-light text-[15px] text-gray-400 lowercase mb-8">narrativas espaciales</p>
+        <p class="font-sans text-[10px] text-gray-600 mt-12">&copy; 2026 Estudio Tragaluz. Todos los derechos reservados.</p>
+    </footer>
+
+    
+    <!-- CONTENEDOR DE LA PÁGINA 2 (OCULTO POR DEFECTO) -->
+    <!-- Se sobrepone a toda la página para dar la ilusión de cambio de vista -->
+    <div id="services-view" style="display: none; position: fixed; inset: 0; z-index: 9999; background: #f8f5f0; width: 100vw; height: 100vh;">
+        <iframe id="services-frame" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+
+    <!-- AQUÍ GUARDAMOS EL CÓDIGO 2 EXACTO E INTACTO -->
+    <!-- Al guardarlo en un textarea, el navegador no lo procesa con Tailwind, manteniéndolo puro -->
+    <textarea id="page2-source" style="display: none;">
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -171,26 +327,6 @@
   </div>
 
   <h1>Tarifas de registro y<br><em>producción de contenidos</em></h1>
-  <p class="subtitle">Propuesta técnica y comercial estructurada para la revista <strong>Look and feel</strong>. Valores calculados para garantizar la más alta calidad en la representación visual y narrativa de los espacios.</p>
-
-  <div class="doc-meta">
-    <div class="meta-item">
-      <div class="meta-lbl">Cliente</div>
-      <div class="meta-val">Revista Look and Feel<br><span style="color:var(--ink3);font-size:12px;line-height:1.4;display:block;margin-top:2px;">Natalia Parrado</span></div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-lbl">Documento</div>
-      <div class="meta-val">Tarifario de Servicios</div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-lbl">Fecha</div>
-      <div class="meta-val">Mayo de 2026</div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-lbl">Vigencia</div>
-      <div class="meta-val">Condiciones fijas</div>
-    </div>
-  </div>
 
   <p class="intro">Presentamos el desglose de nuestras tarifas para los servicios de registro audiovisual en sitio, edición fotográfica arquitectónica y creación de contenido en formato vertical (Reels). Puedes utilizar el cotizador interactivo para estimar costos según el volumen requerido.</p>
 
@@ -293,13 +429,13 @@
         <div class="rg-header" style="display:flex; justify-content:space-between; align-items:flex-start;">
           <div>
             <div class="rg-num">04</div>
-            <div class="rg-title">Trabajo de Estrategia y Consultoria <span style="font-size:10px; background:var(--surface2); padding:3px 8px; border-radius:100px; margin-left:8px; vertical-align:middle; text-transform:uppercase; letter-spacing:1px; color:var(--ink3);">Opcional</span></div>
-            <div class="rg-desc" style="max-width: 600px;">Para requerimientos adicionales de estrategia creativa, pre-producción, o reuniones de conceptualización editorial que salgan de los esquemas anteriores.</div>
+            <div class="rg-title">Trabajo de Estudio y Curaduría <span style="font-size:10px; background:var(--surface2); padding:3px 8px; border-radius:100px; margin-left:8px; vertical-align:middle; text-transform:uppercase; letter-spacing:1px; color:var(--ink3);">Opcional</span></div>
+            <div class="rg-desc" style="max-width: 600px;">Para requerimientos adicionales de trabajo de mesa, pre-producción, o reuniones de conceptualización editorial que salgan de los esquemas anteriores.</div>
           </div>
         </div>
         <div class="item-row">
           <div class="item-info">
-            <div class="item-name">Tarifa base</div>
+            <div class="item-name">Tarifa base de estudio</div>
             <div class="item-price" style="font-family: 'Outfit', sans-serif;">$105.000 <small>COP / hr</small></div>
           </div>
           <div class="qty-control">
@@ -324,7 +460,7 @@
         <div class="calc-row hidden" id="row-dia"><div class="cr-name"><span id="lbl-dia">0</span>x Días completos (8h)</div><div class="cr-val" id="val-dia">$0</div></div>
         <div class="calc-row hidden" id="row-foto"><div class="cr-name"><span id="lbl-foto">0</span>x Fotos editadas</div><div class="cr-val" id="val-foto">$0</div></div>
         <div class="calc-row hidden" id="row-video"><div class="cr-name"><span id="lbl-video">0</span>x Minutos de Reel</div><div class="cr-val" id="val-video">$0</div></div>
-        <div class="calc-row hidden" id="row-estudio"><div class="cr-name"><span id="lbl-estudio">0</span>x Horas de estrategia</div><div class="cr-val" id="val-estudio">$0</div></div>
+        <div class="calc-row hidden" id="row-estudio"><div class="cr-name"><span id="lbl-estudio">0</span>x Horas de curaduría</div><div class="cr-val" id="val-estudio">$0</div></div>
       </div>
 
       <div class="calc-total-row">
@@ -383,7 +519,7 @@
     dia: 1130000,
     foto: 50000,
     video: 220000,
-    estudio: 105000 // Corregido: antes decía "estrategia"
+    estudio: 105000
   };
 
   // Estado inicial de cantidades
@@ -393,7 +529,7 @@
     dia: 0,
     foto: 0,
     video: 0,
-    estudio: 0 // Corregido: antes decía "estrategia"
+    estudio: 0
   };
 
   // Función para formatear moneda
@@ -481,5 +617,70 @@
   // Inicializar estado visual al cargar
   recalculate();
 </script>
+</body>
+</html>
+    </textarea>
+
+    <script>
+        
+        // 1. Script original de la página 1 (Scroll Reveal)
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        });
+
+        // 2. Script para abrir la segunda página en el Iframe (Aislamiento de CSS)
+        let isIframeLoaded = false;
+
+        function openServices() {
+            // Bloqueamos el scroll del fondo
+            document.body.style.overflow = 'hidden'; 
+            document.getElementById('services-view').style.display = 'block';
+
+            if (!isIframeLoaded) {
+                // Tomamos el código original intacto
+                const sourceCode = document.getElementById('page2-source').value;
+                
+                // Botón de regreso que inyectaremos sutilmente dentro del Iframe
+                const backBtnHTML = `
+                <div style="margin-bottom: 24px;">
+                    <button onclick="window.parent.closeServices()" style="background: transparent; border: 1px solid var(--border); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--ink2); display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        Volver al inicio
+                    </button>
+                </div>
+                `;
+
+                // Colocamos el botón justo antes del logo de la página 2
+                const newSourceCode = sourceCode.replace('<div class="logo-row">', backBtnHTML + '<div class="logo-row">');
+
+                // Escribimos el código en el iframe aislado
+                const iframe = document.getElementById('services-frame');
+                iframe.contentWindow.document.open();
+                iframe.contentWindow.document.write(newSourceCode);
+                iframe.contentWindow.document.close();
+                
+                isIframeLoaded = true;
+            }
+        }
+
+        // Esta función es llamada desde DENTRO del iframe
+        function closeServices() {
+            document.body.style.overflow = ''; // Devolvemos el scroll al fondo
+            document.getElementById('services-view').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
