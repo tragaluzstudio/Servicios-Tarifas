@@ -68,11 +68,8 @@
         <div class="absolute inset-0 hero-overlay"></div>
         <div class="relative z-10 px-4 flex flex-col items-center w-full">
             <img src="TGZ_Logo_LOGO%20FULL%20POSITIVO.png" alt="Estudio Tragaluz Logo" class="w-[280px] md:w-[400px] lg:w-[480px] h-auto mb-6 hero-animate">
-            <p class="text-gray-200 text-sm md:text-lg lg:text-xl font-sans font-light tracking-wide hero-animate-delay md:whitespace-nowrap">
-                Fotografía y audiovisuales para proyectos de arquitectura, interiorismo, diseño y arte.
-            </p>
         </div>
-        <a href="#esencia" class="absolute bottom-10 z-10 text-white opacity-70 hover:opacity-100 transition-opacity flex flex-col items-center gap-2 group">
+        <a href="#narrativa" class="absolute bottom-10 z-10 text-white opacity-70 hover:opacity-100 transition-opacity flex flex-col items-center gap-2 group">
             <span class="text-xs uppercase tracking-widest font-sans">Descubre nuestra mirada</span>
             <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -80,13 +77,32 @@
         </a>
     </header>
 
+    <!-- SECCIÓN NARRATIVA: protagonista -->
+    <section id="narrativa" class="py-32 md:py-44 px-6 md:px-16 lg:px-24 bg-white border-b border-tragaluz-light">
+        <div class="max-w-5xl mx-auto reveal">
+            <h2 class="font-sans font-bold text-tragaluz-dark leading-none mb-8"
+                style="font-size: clamp(68px, 11vw, 130px); letter-spacing: -0.04em; line-height: 0.88;">
+                narrativa
+            </h2>
+            <div class="max-w-lg border-l border-tragaluz-accent pl-6">
+                <p class="font-sans font-semibold text-tragaluz-accent text-base md:text-xl tracking-wide leading-relaxed mb-2">
+                    (narrare &mdash; contar &middot; tivo &mdash; relación activa)
+                </p>
+                <p class="font-sans font-light text-tragaluz-dark text-base md:text-lg leading-relaxed">
+                    toda serie de eventos conectados que conforman un relato.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- SECCIÓN 2: NUESTRA ESENCIA (THE WHY) -->
     <section id="esencia" class="py-24 md:py-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         <div class="w-full lg:w-1/2 reveal">
-            <span class="text-tragaluz-accent text-sm uppercase tracking-[0.2em] mb-4 block font-sans font-light">Nuestra Filosofía</span>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-tragaluz-dark leading-tight mb-8">Contar el proyecto a través de la imagen</h2>
+            <span class="text-tragaluz-accent text-sm uppercase tracking-[0.2em] mb-4 block font-sans font-light">La práctica</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-tragaluz-dark leading-tight mb-8">Fotografía como pensamiento arquitectónico</h2>
             <div class="text-gray-600 font-sans font-light leading-relaxed space-y-6 text-lg">
-                <p>La mejor forma de capturar, habitar y comprender un proyecto se da a través de entender las decisiones de diseño y traducirlas en imágenes y piezas audiovisuales con alma, construyendo un relato que conecte con la esencia del proyecto.</p>
+                <p>Nuestra mirada estética nace de nuestra formación profesional como arquitectos. Abordamos cada espacio como una atmósfera viva.</p>
+                <p>Traducimos visualmente el rigor y la sensibilidad de la arquitectura a la fotografía de autor, construyendo un relato que conecte con la esencia del proyecto.</p>
             </div>
         </div>
         <div class="w-full lg:w-1/2 relative h-[500px] md:h-[600px] reveal delay-200 mt-10 lg:mt-0">
@@ -95,29 +111,189 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 3: NUESTRO ENFOQUE (THE WHAT) -->
-    <section class="py-24 bg-tragaluz-dark text-tragaluz-bg px-6 md:px-12 lg:px-24">
+
+    <!-- SECCIÓN EL ESTUDIO + NOSOTROS: una sola sección cohesiva -->
+    <section class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20 reveal">
-                <p class="w-full max-w-none mx-auto font-sans font-light text-gray-300 text-lg md:text-xl lg:whitespace-nowrap">
-                    Somos arquitectos y artistas visuales, nos comunicamos en tu lenguaje y lo traducimos a través de la imagen.
+
+            <!-- Descripción del estudio -->
+            <div class="reveal mb-16 max-w-4xl">
+                <span class="text-tragaluz-accent text-sm uppercase tracking-[0.2em] mb-6 block font-sans font-light">El estudio</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-tragaluz-dark leading-tight">
+                    Documentamos proyectos de arquitectura, interiorismo, diseño y arte.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-24 reveal delay-100">
+                <p class="text-gray-600 font-sans font-light leading-relaxed text-lg">
+                    Con una mirada sensible y precisa sobre el espacio, el trabajo de Tragaluz resalta las cualidades de cada proyecto desde el registro documental de procesos creativos y de obra, hasta el proyecto terminado, traduciendo desde el lente las intenciones de sus creadores para construir las narrativas que relatan y comunican la intención de diseño, el carácter y la atmósfera de cada proyecto.
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+            <!-- Divisor -->
+            <div class="border-t border-tragaluz-light mb-20"></div>
+
+            <!-- Equipo -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
+                <div class="reveal">
+                    <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] mb-3 block font-sans font-light">Dirección Creativa</span>
+                    <h3 class="text-xl font-sans font-bold text-tragaluz-dark mb-4">Gabriela Rueda</h3>
+                    <p class="text-gray-600 font-sans font-light leading-relaxed">Curaduría y diseño editorial del diálogo entre concepto, obra y espacio. Construye el hilo narrativo que conecta cada pieza visual con el lenguaje de cada proyecto.</p>
+                </div>
+                <div class="reveal delay-100">
+                    <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] mb-3 block font-sans font-light">Producción Visual</span>
+                    <h3 class="text-xl font-sans font-bold text-tragaluz-dark mb-4">Federico Durán</h3>
+                    <p class="text-gray-600 font-sans font-light leading-relaxed">Registro documental como lenguaje artístico y estético. Explora técnicas, formatos y medios para comunicar visualmente una idea.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SLIDER DE PROYECTOS -->
+    <div class="w-full overflow-hidden" style="background:#F9F8F6;">
+        <style>
+            .proj-slide {
+                flex-shrink: 0;
+                aspect-ratio: 4/3;
+                width: calc((100vw - 24px) / 1.15);
+            }
+            @media (min-width: 640px)  { .proj-slide { width: calc((100vw - 24px) / 2); } }
+            @media (min-width: 1024px) { .proj-slide { width: calc((100vw - 36px) / 3); } }
+        </style>
+
+        <div class="flex gap-3 py-3"
+             id="proj-track"
+             style="transform:translateX(0);
+                    transition:transform 0.75s cubic-bezier(0.25,0.46,0.45,0.94);
+                    will-change:transform;">
+
+            <!-- ▸ SLIDE 1 — reemplaza el div con: <img src="TU_FOTO.jpg" class="w-full h-full object-cover"> -->
+            <div class="proj-slide bg-tragaluz-light flex items-center justify-center">
+                <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] font-sans font-light">Proyecto 01</span>
+            </div>
+            <!-- ▸ SLIDE 2 -->
+            <div class="proj-slide bg-tragaluz-light flex items-center justify-center" style="background:#e5e2dc;">
+                <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] font-sans font-light">Proyecto 02</span>
+            </div>
+            <!-- ▸ SLIDE 3 -->
+            <div class="proj-slide bg-tragaluz-light flex items-center justify-center">
+                <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] font-sans font-light">Proyecto 03</span>
+            </div>
+            <!-- ▸ SLIDE 4 -->
+            <div class="proj-slide bg-tragaluz-light flex items-center justify-center" style="background:#e5e2dc;">
+                <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] font-sans font-light">Proyecto 04</span>
+            </div>
+            <!-- ▸ SLIDE 5 -->
+            <div class="proj-slide bg-tragaluz-light flex items-center justify-center">
+                <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] font-sans font-light">Proyecto 05</span>
+            </div>
+            <!-- ▸ SLIDE 6 -->
+            <div class="proj-slide bg-tragaluz-light flex items-center justify-center" style="background:#e5e2dc;">
+                <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] font-sans font-light">Proyecto 06</span>
+            </div>
+
+        </div>
+    </div>
+    <script>
+    (function () {
+        var track = document.getElementById('proj-track');
+        if (!track) return;
+        var slides   = track.querySelectorAll('.proj-slide');
+        var current  = 0;
+        var paused   = false;
+
+        function getStep() {
+            return slides[0].offsetWidth + 12; /* slide width + gap-3 (12px) */
+        }
+        function visibleCount() {
+            var w = window.innerWidth;
+            return w >= 1024 ? 3 : w >= 640 ? 2 : 1;
+        }
+        function advance() {
+            if (paused) return;
+            var max = slides.length - visibleCount();
+            if (current >= max) {
+                /* jump back silently, then continue */
+                track.style.transition = 'none';
+                track.style.transform  = 'translateX(0)';
+                void track.offsetWidth; /* force reflow */
+                track.style.transition = 'transform 0.75s cubic-bezier(0.25,0.46,0.45,0.94)';
+                current = 0;
+                return;
+            }
+            current++;
+            track.style.transform = 'translateX(-' + (current * getStep()) + 'px)';
+        }
+
+        track.parentElement.addEventListener('mouseenter', function () { paused = true; });
+        track.parentElement.addEventListener('mouseleave', function () { paused = false; });
+
+        setInterval(advance, 4000);
+    })();
+    </script>
+
+    <!-- SECCIÓN SERVICIOS: independiente -->
+    <section class="py-24 md:py-32 bg-tragaluz-dark text-tragaluz-bg px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="reveal mb-16">
+                <span class="text-tragaluz-accent text-xs uppercase tracking-[0.2em] font-sans font-light">Servicios</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <div class="reveal border-t border-gray-700 pt-8">
                     <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-4 block">01</span>
                     <h3 class="text-xl font-sans font-bold mb-4 uppercase tracking-wider">Fotografía</h3>
-                    <p class="font-sans font-light text-gray-400 leading-relaxed">Registramos el proyecto, sus características y propósitos. Capturamos la obra resaltando sus elementos característicos y atmósferas para resaltar su caracter.</p>
+                    <p class="font-sans font-light text-gray-400 leading-relaxed">Registramos el proyecto, sus características y propósitos. Capturamos la obra resaltando sus elementos característicos y atmósferas para realzar su carácter.</p>
                 </div>
                 <div class="reveal delay-100 border-t border-gray-700 pt-8">
                     <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-4 block">02</span>
                     <h3 class="text-xl font-sans font-bold mb-4 uppercase tracking-wider">Cinematografía</h3>
-                    <p class="font-sans font-light text-gray-400 leading-relaxed">Movimiento y sonido para narrar el flujo, la escala y la atmósfera y esencia del proyecto. Creamos piezas audiovisuales que invitan a descubrir y comunican el valor del diseño.</p>
+                    <p class="font-sans font-light text-gray-400 leading-relaxed">Movimiento y sonido para narrar el flujo, la escala y la atmósfera del proyecto. Creamos piezas audiovisuales que invitan a descubrir y comunican el valor del diseño.</p>
                 </div>
                 <div class="reveal delay-200 border-t border-gray-700 pt-8">
                     <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-4 block">03</span>
                     <h3 class="text-xl font-sans font-bold mb-4 uppercase tracking-wider">Dirección de Arte</h3>
                     <p class="font-sans font-light text-gray-400 leading-relaxed">Planificamos cada escena para que cada pieza visual comunique la intención original del diseño, aportando escala humana y naturalidad de manera estratégica.</p>
+                </div>
+                <div class="reveal delay-300 border-t border-gray-700 pt-8">
+                    <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-4 block">04</span>
+                    <h3 class="text-xl font-sans font-bold mb-4 uppercase tracking-wider">Diseño Editorial</h3>
+                    <p class="font-sans font-light text-gray-400 leading-relaxed">Diagramamos y diseñamos piezas visuales para plataformas digitales y medios impresos, comunicando con coherencia y rigor la identidad de cada proyecto.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4C: FLUJO DE TRABAJO -->
+    <section class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-tragaluz-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-tragaluz-accent text-sm uppercase tracking-[0.2em] mb-4 block font-sans font-light">metodologia</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-tragaluz-dark leading-tight">
+                    Del encargo a la publicación.
+                </h2>
+            </div>
+                    </div>
+                    <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-6 block">01</span>
+                    <h3 class="text-sm font-sans font-bold text-tragaluz-dark uppercase tracking-wider mb-4">Briefing & Estrategia de Captura</h3>
+                    <p class="font-sans font-light text-gray-500 leading-relaxed text-sm md:text-base">
+                        Todo gran registro inicia en la mesa. Analizamos cada aspecto de tu proyecto para diseñar un concepto visual detallado. Determinamos la orientación solar para programar los bloques de captura en las horas de luz óptimas, garantizando que el volumen y las texturas destaquen naturalmente.
+                    </p>
+                    </div>
+                    <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-6 block">02</span>
+                    <h3 class="text-sm font-sans font-bold text-tragaluz-dark uppercase tracking-wider mb-4">Producción en Obra o Locación</h3>
+                    <p class="font-sans font-light text-gray-500 leading-relaxed text-sm md:text-base">
+                        Ejecutamos la jornada de registro combinando agilidad y rigor compositivo. Dirigimos la escena, implementamos el styling necesario para dar escala humana al espacio, y realizamos tanto las tomas fotográficas como el material de video.
+                    </p>
+                    </div>
+                    <span class="text-tragaluz-accent text-3xl font-sans font-bold mb-6 block">03</span>
+                    <h3 class="text-sm font-sans font-bold text-tragaluz-dark uppercase tracking-wider mb-4">Laboratorio Digital y Entrega</h3>
+                    <p class="font-sans font-light text-gray-500 leading-relaxed text-sm md:text-base">
+                        El proceso de postproducción es exhaustivo. Corregimos perspectivas, limpiamos interferencias visuales y realizamos un revelado de luz y colorimetría precisa para que los materiales mantengan su fidelidad absoluta. Entregamos piezas finales optimizadas tanto para medios digitales como para impresión editorial.
+                    </p>
                 </div>
             </div>
         </div>
@@ -127,13 +303,13 @@
     <section class="py-32 px-6 text-center bg-white border-y border-tragaluz-light reveal">
         <div class="max-w-3xl mx-auto flex flex-col items-center">
             <p class="font-sans font-light text-gray-600 text-xl leading-relaxed mb-10">
-                Sabemos que cada proyecto es único, desde el diseño de una pieza de mobiliario, un proyecto arquitectónico, hasta un plan maestro. Por eso desarrollamos una propuesta a la medida de tus necesidades.
+                Sabemos que cada proyecto es único, desde el diseño de una pieza de mobiliario, un proyecto arquitectónico, hasta un plan maestro. Desarrollamos una propuesta a la medida de tus necesidades.
             </p>
             
-            <!-- BOTÓN QUE ABRE LOS SERVICIOS -->
-            <button onclick="openServices()" class="bg-tragaluz-dark text-tragaluz-bg px-8 py-4 uppercase tracking-[0.15em] text-sm font-semibold hover:bg-tragaluz-accent transition-colors shadow-lg">
-                Conoce nuestros servicios
-            </button>
+            <!-- BOTÓN QUE ABRE EL PORTAFOLIO -->
+            <a href="https://tragaluz.myportfolio.com/work" target="_blank" rel="noopener" class="bg-tragaluz-dark text-tragaluz-bg px-8 py-4 uppercase tracking-[0.15em] text-sm font-semibold hover:bg-tragaluz-accent transition-colors shadow-lg inline-block">
+                Conoce nuestro trabajo
+            </a>
         </div>
     </section>
 
